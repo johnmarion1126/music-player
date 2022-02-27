@@ -9,6 +9,7 @@ const Icon: React.FC<IconType> = ({ imgSrc, desc }) => (
   <img
     src={imgSrc}
     alt={desc}
+    className="w-8"
   />
 );
 
