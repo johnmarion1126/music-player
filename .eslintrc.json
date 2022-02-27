@@ -20,9 +20,30 @@
         "@typescript-eslint"
     ],
     "rules": {
-        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx'", ".tsx" ]}],
+        "react/jsx-filename-extension": [
+            1, {   
+                "extensions": [".js", ".jsx'", ".tsx" ]
+            }
+        ],
+        "import/extensions": [
+            "error",
+            "ignorePackages",
+            {
+                "js": "never",
+                "jsx": "never",
+                "ts": "never",
+                "tsx": "never"
+            }
+        ],
         "react/function-component-definition": 0,
         "linebreak-style": 0,
         "react/prop-types": "off"
+    },
+    "settings": {
+        "import/resolver": {
+            "node": {
+                "extensions": [".js", ".jsx", ".ts", ".tsx"]
+            }
+        }
     }
 }
