@@ -1,6 +1,6 @@
 import React from 'react';
 
-// FOR TESTING STYLING
+// FOR TESTING
 import RecordImg from '../../assets/record.jpg';
 
 const SongImg: React.FC = () => (
