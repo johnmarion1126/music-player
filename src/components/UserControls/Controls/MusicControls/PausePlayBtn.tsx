@@ -16,8 +16,18 @@ const PausePlayBtn: React.FC = () => {
       type="button"
     >
       { isPause
-        ? <Icon imgSrc={PauseImg} desc="Pause Icon" />
-        : <Icon imgSrc={PlayImg} desc="Play Icon" />}
+        ? (
+          <Icon
+            imgSrc={PauseImg}
+            desc="Pause Icon"
+          />
+        )
+        : (
+          <Icon
+            imgSrc={PlayImg}
+            desc="Play Icon"
+          />
+        )}
     </button>
   );
 };

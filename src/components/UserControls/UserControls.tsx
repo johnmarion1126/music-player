@@ -3,7 +3,7 @@ import React from 'react';
 import Controls from './Controls/Controls';
 
 const UserControls: React.FC = () => (
-  <div className="h-[20%] flex justify-center items-center pb-10">
+  <div className="flex justify-center items-center">
     <Controls />
   </div>
 );

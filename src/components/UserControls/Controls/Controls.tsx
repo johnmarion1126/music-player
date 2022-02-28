@@ -4,7 +4,7 @@ import InteractionControls from './InteractionControls/InteractionControls';
 import MusicControls from './MusicControls/MusicControls';
 
 const Controls: React.FC = () => (
-  <section className="flex flex-col w-full">
+  <section className="flex flex-col w-full absolute bottom-0">
     <MusicControls />
     <InteractionControls />
   </section>
