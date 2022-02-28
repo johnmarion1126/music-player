@@ -1,8 +1,8 @@
 import React from 'react';
 
-import RewindImg from '../../../assets/rewind.png';
+import RewindImg from '../../../../assets/rewind.png';
 
-import Icon from './Icon';
+import Icon from '../Icon';
 
 const RewindBtn: React.FC = () => (
   <Icon

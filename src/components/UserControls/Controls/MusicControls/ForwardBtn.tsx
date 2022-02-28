@@ -1,8 +1,8 @@
 import React from 'react';
 
-import ForwardImg from '../../../assets/forward.png';
+import ForwardImg from '../../../../assets/forward.png';
 
-import Icon from './Icon';
+import Icon from '../Icon';
 
 const ForwardBtn: React.FC = () => (
   <Icon

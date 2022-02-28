@@ -1,15 +1,13 @@
 import React from 'react';
 
-import PausePlayBtn from './PausePlayBtn';
-import ForwardBtn from './ForwardBtn';
-import RewindBtn from './RewindBtn';
+import InteractionControls from './InteractionControls/InteractionControls';
+import MusicControls from './MusicControls/MusicControls';
 
 const Controls: React.FC = () => (
-  <div className="flex flex-row gap-4">
-    <RewindBtn />
-    <PausePlayBtn />
-    <ForwardBtn />
-  </div>
+  <section className="flex flex-col w-full">
+    <MusicControls />
+    <InteractionControls />
+  </section>
 );
 
 export default Controls;
