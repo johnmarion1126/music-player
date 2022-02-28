@@ -1,6 +1,6 @@
 import React from 'react';
 
-import RewindImg from '../../../../assets/rewind.png';
+import RewindImg from '../../../assets/rewind.png';
 
 import Icon from '../Icon';
 

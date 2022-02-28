@@ -1,11 +1,13 @@
 import React from 'react';
 
-import Controls from './Controls/Controls';
+import InteractionControls from './InteractionControls/InteractionControls';
+import MusicControls from './MusicControls/MusicControls';
 
 const UserControls: React.FC = () => (
-  <div className="flex justify-center items-center">
-    <Controls />
-  </div>
+  <section className="flex flex-col w-full absolute bottom-0">
+    <MusicControls />
+    <InteractionControls />
+  </section>
 );
 
 export default UserControls;

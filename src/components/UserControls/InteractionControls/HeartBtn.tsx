@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-import HeartImg from '../../../../assets/heart-open.png';
-import RedHeartImg from '../../../../assets/heart-red.png';
+import HeartImg from '../../../assets/heart-open.png';
+import RedHeartImg from '../../../assets/heart-red.png';
 
 import Icon from '../Icon';
 

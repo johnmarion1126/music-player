@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-import PauseImg from '../../../../assets/pause.png';
-import PlayImg from '../../../../assets/play.png';
+import PauseImg from '../../../assets/pause.png';
+import PlayImg from '../../../assets/play.png';
 
 import Icon from '../Icon';
 
