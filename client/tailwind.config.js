@@ -7,6 +7,11 @@ module.exports = {
       fontFamily: {
         RedHat: ['Red Hat Display'],
       },
+      dropShadow: {
+        '4xl': [
+          '0 10px 25px rgba(0, 0, 0, 0.60)',
+        ],
+      },
     },
   },
   plugins: [],

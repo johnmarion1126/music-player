@@ -7,7 +7,7 @@ const SongImg: React.FC = () => (
   <img
     src={RecordImg}
     alt="A 45 record"
-    className="w-[70%] bg-gray-800 drop-shadow-2xl"
+    className="w-[70%] bg-gray-800 rounded-2xl drop-shadow-2xl"
   />
 );
 
