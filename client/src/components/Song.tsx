@@ -12,7 +12,6 @@ const Song: React.FC = () => {
     <Sound
       url={test}
       playStatus={isPause ? Sound.status.PAUSE : Sound.status.PLAYING}
-      playFromPosition={300}
       onLoading={() => { console.log('LOADING'); }}
       onPlaying={() => { console.log('PLAYING'); }}
       onFinishedPlaying={() => { console.log('FINISHED'); }}
