@@ -1,22 +1,23 @@
+/* eslint-disable no-param-reassign */
 import { createSlice } from '@reduxjs/toolkit';
 
 interface SongState {
-    value: 'Hello World'
+    isPause: boolean
 }
 
 const initialState: SongState = {
-  value: 'Hello World',
+  isPause: false,
 };
 
 const songSlice = createSlice({
   name: 'song',
   initialState,
   reducers: {
-    sayHello: (state) => {
-      console.log(state.value);
+    pausePlay: (state) => {
+      state.isPause = !state.isPause;
     },
   },
 });
 
-export const { sayHello } = songSlice.actions;
+export const { pausePlay } = songSlice.actions;
 export default songSlice.reducer;

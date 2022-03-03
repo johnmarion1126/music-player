@@ -1,15 +1,17 @@
 import React from 'react';
 
+import { useAppSelector } from '../app/hook';
+
 const Sound = require('react-sound').default;
 const test = require('../assets/test.mp3');
 
 const Song: React.FC = () => {
-  console.log('Hello World');
+  const isPause = useAppSelector((state) => state.song.isPause);
 
   return (
     <Sound
       url={test}
-      playStatus={Sound.status.PLAYING}
+      playStatus={isPause ? Sound.status.PAUSE : Sound.status.PLAYING}
       playFromPosition={300}
       onLoading={() => { console.log('LOADING'); }}
       onPlaying={() => { console.log('PLAYING'); }}
