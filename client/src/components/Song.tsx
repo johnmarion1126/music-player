@@ -5,6 +5,12 @@ import { useAppSelector } from '../app/hook';
 const Sound = require('react-sound').default;
 const test = require('../assets/test.mp3');
 
+// TODO: Allow downloads
+// TODO: Add a second song
+// TODO: Forward button skips to next song
+// TODO: Backward button rewinds song
+// TODO: Backward button goes to previous song if position of song is below a certain threshold
+
 const Song: React.FC = () => {
   const isPause = useAppSelector((state) => state.song.isPause);
 
