@@ -1,6 +1,6 @@
 import React from 'react';
 
-import DownloadImg from '../../../assets/download.png';
+import DownloadImg from '../../../assets/images/download.png';
 import Icon from '../Icon';
 
 const DownloadBtn: React.FC = () => (

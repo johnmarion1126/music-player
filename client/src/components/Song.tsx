@@ -3,7 +3,7 @@ import React from 'react';
 import { useAppSelector } from '../app/hook';
 
 const Sound = require('react-sound').default;
-const test = require('../assets/test.mp3');
+const test = require('../assets/music/he_went_away.mp3');
 
 // TODO: Allow downloads
 // TODO: Add a second song

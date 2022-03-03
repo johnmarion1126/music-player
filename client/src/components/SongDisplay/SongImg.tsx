@@ -1,7 +1,7 @@
 import React from 'react';
 
 // FOR TESTING
-import RecordImg from '../../assets/record.jpg';
+import RecordImg from '../../assets/images/record.jpg';
 
 const SongImg: React.FC = () => (
   <img
