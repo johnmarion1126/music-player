@@ -1,19 +1,18 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import PauseImg from '../../../assets/images/pause.png';
 import PlayImg from '../../../assets/images/play.png';
 
 import Icon from '../Icon';
 
-import { useAppDispatch } from '../../../app/hook';
+import { useAppSelector, useAppDispatch } from '../../../app/hook';
 import { pausePlay } from '../../../features/songSlice';
 
 const PausePlayBtn: React.FC = () => {
-  const [isPause, setIsPaused] = useState(true);
+  const isPause = useAppSelector((state) => state.song.isPause);
   const dispatch = useAppDispatch();
 
   const handleClick = () => {
-    setIsPaused(!isPause);
     dispatch(pausePlay());
   };
 
@@ -25,14 +24,14 @@ const PausePlayBtn: React.FC = () => {
       { isPause
         ? (
           <Icon
-            imgSrc={PauseImg}
-            desc="Pause Icon"
+            imgSrc={PlayImg}
+            desc="Play Icon"
           />
         )
         : (
           <Icon
-            imgSrc={PlayImg}
-            desc="Play Icon"
+            imgSrc={PauseImg}
+            desc="Pause Icon"
           />
         )}
     </button>

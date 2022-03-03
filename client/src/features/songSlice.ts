@@ -4,7 +4,7 @@ import { createSlice } from '@reduxjs/toolkit';
 interface SongState {
     name: string,
     artist: string,
-    song: string,
+    sound: string,
     cover: string
     isPause: boolean
 }
@@ -12,9 +12,9 @@ interface SongState {
 const initialState: SongState = {
   name: '',
   artist: '',
-  song: '',
+  sound: '',
   cover: '',
-  isPause: false,
+  isPause: true,
 };
 
 const songSlice = createSlice({
@@ -24,7 +24,7 @@ const songSlice = createSlice({
     setSong: (state, { payload }) => {
       state.name = payload.name;
       state.artist = payload.artist;
-      state.song = payload.song;
+      state.sound = payload.sound;
       state.cover = payload.cover;
     },
     pausePlay: (state) => {

@@ -11,7 +11,6 @@ const Sound = require('react-sound').default;
 const song1 = require('../assets/music/he_went_away.mp3');
 const song2 = require('../assets/music/always_so_true.mp3');
 
-// TODO: Allow downloads
 // TODO: Forward button skips to next song
 // TODO: Backward button rewinds song
 // TODO: Backward button goes to previous song if position of song is below a certain threshold
@@ -32,19 +31,18 @@ const songs = [
 ];
 
 const Song: React.FC = () => {
-  const currentSong = useAppSelector((state) => state.song.song);
+  const currentSong = useAppSelector((state) => state.song.sound);
   const isPause = useAppSelector((state) => state.song.isPause);
 
   const dispatch = useAppDispatch();
 
   useEffect(() => {
     dispatch(setSong(songs[0]));
-    console.log(currentSong);
   }, []);
 
   return (
     <Sound
-      url={currentSong || song1}
+      url={currentSong}
       playStatus={isPause ? Sound.status.PAUSE : Sound.status.PLAYING}
       onLoading={() => { console.log('LOADING'); }}
       onPlaying={() => { console.log('PLAYING'); }}
