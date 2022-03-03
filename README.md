@@ -1,4 +1,5 @@
 # music-player
 A  music player app made with react.
 
-![image](https://user-images.githubusercontent.com/48599206/156473937-94e52844-d2a0-4c89-9e93-11c4189c6114.png)
+![image](https://user-images.githubusercontent.com/48599206/156479793-8a3bde90-5a88-473f-94b4-c77a94033667.png)
+
