@@ -6,7 +6,8 @@ interface SongState {
     artist: string,
     sound: string,
     cover: string
-    isPause: boolean
+    isPause: boolean,
+    index: number
 }
 
 const initialState: SongState = {
@@ -15,6 +16,7 @@ const initialState: SongState = {
   sound: '',
   cover: '',
   isPause: true,
+  index: 0,
 };
 
 const songSlice = createSlice({
@@ -26,12 +28,23 @@ const songSlice = createSlice({
       state.artist = payload.artist;
       state.sound = payload.sound;
       state.cover = payload.cover;
+      state.index = payload.index;
     },
     pausePlay: (state) => {
       state.isPause = !state.isPause;
     },
+    skipToNext: (state) => {
+      state.index += 1;
+    },
+    rewindToPrev: (state) => {
+      if (state.index !== 0) {
+        state.index -= 1;
+      }
+    },
   },
 });
 
-export const { pausePlay, setSong } = songSlice.actions;
+export const {
+  pausePlay, setSong, skipToNext, rewindToPrev,
+} = songSlice.actions;
 export default songSlice.reducer;

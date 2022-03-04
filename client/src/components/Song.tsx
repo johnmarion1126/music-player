@@ -11,9 +11,7 @@ const Sound = require('react-sound').default;
 const song1 = require('../assets/music/he_went_away.mp3');
 const song2 = require('../assets/music/always_so_true.mp3');
 
-// TODO: Forward button skips to next song
-// TODO: Backward button rewinds song
-// TODO: Backward button goes to previous song if position of song is below a certain threshold
+// TODO: Add animation when transitioning
 
 const songs = [
   {
@@ -21,24 +19,26 @@ const songs = [
     artist: 'April, May, and June',
     sound: song1,
     cover: song1Cover,
+    index: 0,
   },
   {
     name: 'Always So True',
     artist: 'Gary Glenn and the Jewel Tones',
     sound: song2,
     cover: song2Cover,
+    index: 1,
   },
 ];
 
 const Song: React.FC = () => {
-  const currentSong = useAppSelector((state) => state.song.sound);
+  const [currentSong, index] = useAppSelector((state) => [state.song.sound, state.song.index]);
   const isPause = useAppSelector((state) => state.song.isPause);
 
   const dispatch = useAppDispatch();
 
   useEffect(() => {
-    dispatch(setSong(songs[0]));
-  }, []);
+    dispatch(setSong(songs[index]));
+  }, [index]);
 
   return (
     <Sound
