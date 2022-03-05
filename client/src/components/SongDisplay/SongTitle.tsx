@@ -8,7 +8,7 @@ const SongTitle: React.FC = () => {
   return (
 
     <>
-      <h1 className="mt-4 font-bold">
+      <h1 className="mt-4 font-bold" data-testid="name">
         {name}
       </h1>
       <h3 className="font-semibold text-sm text-slate-400">

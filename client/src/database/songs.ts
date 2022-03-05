@@ -4,7 +4,7 @@ import song2Cover from '../assets/covers/always_so_true.png';
 const song1 = require('../assets/music/he_went_away.mp3');
 const song2 = require('../assets/music/always_so_true.mp3');
 
-interface Song {
+interface SongIF {
     name: string,
     artist: string,
     sound: string,
@@ -12,7 +12,7 @@ interface Song {
     index: number
 }
 
-const songs: Song[] = [
+const songs: SongIF[] = [
   {
     name: 'He Went Away',
     artist: 'April, May, and June',
