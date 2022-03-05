@@ -18,6 +18,7 @@ const ForwardBtn: React.FC = () => {
     <button
       type="button"
       onClick={handleClick}
+      data-testid="forward-btn"
     >
       <Icon
         imgSrc={ForwardImg}

@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 import { useAppSelector, useAppDispatch } from '../app/hook';
-import { setSong, skipToNext } from '../features/songSlice';
+import { skipToNext } from '../features/songSlice';
 import songs from '../database/songs';
 
 const Sound = require('react-sound').default;
@@ -15,10 +15,6 @@ const Song: React.FC = () => {
   const handleFinish = () => {
     if ((index + 1) !== songs.length) dispatch(skipToNext);
   };
-
-  useEffect(() => {
-    dispatch(setSong(songs[index]));
-  }, [index]);
 
   return (
     <Sound
