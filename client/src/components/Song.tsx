@@ -7,18 +7,20 @@ import songs from '../database/songs';
 const Sound = require('react-sound').default;
 
 const Song: React.FC = () => {
-  const [currentSong, index] = useAppSelector((state) => [state.song.sound, state.song.index]);
+  const [song, index] = useAppSelector((state) => [state.song.sound, state.song.index]);
   const isPause = useAppSelector((state) => state.song.isPause);
 
   const dispatch = useAppDispatch();
 
   const handleFinish = () => {
-    if ((index + 1) !== songs.length) dispatch(skipToNext);
+    if ((index + 1) !== songs.length) {
+      dispatch(skipToNext());
+    }
   };
 
   return (
     <Sound
-      url={currentSong}
+      url={song}
       playStatus={isPause ? Sound.status.PAUSE : Sound.status.PLAYING}
       onFinishedPlaying={handleFinish}
       volume={100}
