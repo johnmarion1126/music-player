@@ -18,6 +18,7 @@ const RewindBtn: React.FC = () => {
     <button
       type="button"
       onClick={handleClick}
+      data-testid="rewind-btn"
     >
       <Icon
         imgSrc={RewindImg}
