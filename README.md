@@ -1,5 +1,5 @@
 # music-player
-A  music player app. Built with React, TypeScript, TailwindCSS, and RTK. [Live Site](https://really-cool-music-player.netlify.app/)
+A music player app that plays songs on the browser. Built with React, TypeScript, TailwindCSS, and RTK. [Live Site](https://really-cool-music-player.netlify.app/)
 
 ![image](https://user-images.githubusercontent.com/48599206/156479793-8a3bde90-5a88-473f-94b4-c77a94033667.png)
 
